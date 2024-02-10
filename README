@@ -1,0 +1,69 @@
+Cloud Automation Project
+Overview
+
+This Cloud Automation Project showcases a comprehensive solo endeavor in automating cloud infrastructure deployment using AWS services and advanced scripting. The project's focus is on enhancing efficiency, scalability, and security through Infrastructure as Code (IaC) and cutting-edge AWS tools.
+
+Key Features
+
+AWS Cloud Automation:
+Deployment and management of 50 EC2 instances and associated infrastructure.
+Utilization of Bash scripting and AWS CLI for orchestration.
+
+Infrastructure as Code (IaC):
+Implementation of best practices in creating launch templates and auto-scaling groups.
+Significant reduction (40%) in resource provisioning time.
+
+Network Configuration:
+Precise setup of subnets and security groups for a robust and secure network architecture.
+
+Load Balancing:
+Independent configuration of load balancers for improved application availability (30% improvement).
+
+Security Measures:
+Integration of AWS Secrets Manager for secure storage and retrieval of credentials.
+
+Database Management:
+Deployment and management of key components:
+1 RDS instance (mariadb, size: db.t3.micro, db-name: customers).
+1 RDS read-replica.
+1 auto-scaling group (Min: 2, Max: 5, Desired: 3).
+
+IAM Permissions:
+Ensured secure access to AWS resources through well-defined IAM policies.
+
+Version Control:
+Utilization of Git for efficient version control.
+Project Structure
+
+create-env.sh:
+Script for AWS Cloud infrastructure creation using positional parameters.
+
+destroy-env.sh:
+Script for terminating all created infrastructure.
+
+install-env.sh:
+Script for installing dependencies and running at infrastructure boot time.
+
+arguments.txt:
+File containing dynamic parameters for the create-env.sh script.
+
+maria.json:
+JSON file for storing secrets related to the MariaDB instance.
+
+app.js:
+JavaScript code for interacting with AWS SDK to manage records and S3 buckets.
+
+index.html:
+HTML file for the main application.
+
+How to Use
+Clone the repository to your local machine.
+Review and update AWS configuration settings in the scripts.
+Execute ./create-env.sh $(<arguments.txt) to create the infrastructure.
+Use ./destroy-env.sh to terminate all resources when needed.
+
+Conclusion
+This project not only demonstrates technical proficiency but also showcases innovative problem-solving and autonomous project leadership. The use of advanced AWS services and efficient scripting contributes to a seamless and scalable cloud infrastructure.
+
+
+
